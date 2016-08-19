@@ -1,4 +1,4 @@
-<?php // require_once("load.php"); 
+<?php  require_once("load.php"); 
 ?>
 <!DOCTYPE html>
 <html>
