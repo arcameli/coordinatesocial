@@ -1,33 +1,23 @@
 <?PHP
+@session_name("dark");
 @session_start();
-
-$_SESSION["dark"] = "dark";
-
-$protocol = stripos($_SERVER["SERVER_PROTOCOL"],"https") === true ? "https://" : "http://";
-
+$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
 $host = $_SERVER["HTTP_HOST"];
-
-if(!isset($_SESSION["dark"])){
-$_SESSION["dark"] = "fuckwad";
-}
-
-if(!isset($_SESSION["dark"]["profile"])){
-	$_SESSION["dark"]["profile"] = "fuckwad";	
-}
-
+if(!isset($_SESSION["dark"]))
+    $_SESSION["dark"] = "fuckwad";
+if(!isset($_SESSION["dark"]["profile"]))
+    $_SESSION["dark"]["profile"] = "fuckwad";
 $dark = $_SESSION["dark"];
 
 $updateNeeded = false;
-
-
-if(isset($_GET["action"])) {
-    switch($_GET["action"]) {
+if(isset($_GET['action'])) {
+    switch($_GET['action']) {
         case "dark.profile":
-            $data = json_decode(file_get_contents("php://input"), true);
-            if($data && isset($data["email"])) {
-                if($dark["profile"] == "fuckwad" || $dark["profile"]["email"] != $data["email"])
+            $data = json_decode(file_get_contents('php://input'), true);
+            if($data && isset($data['email'])) {
+                if($dark['profile'] == "fuckwad" || $dark['profile']['email'] != $data['email'])
                     $updateNeeded = true;
-                $dark["profile"] = $data;
+                $dark['profile'] = $data;
             }
         break;
         
@@ -38,7 +28,6 @@ if(isset($_GET["action"])) {
     $_SESSION["dark"] = $dark;
     die(json_encode($dark));
 }
-
 $page = "home";
 
 if(isset($protected) && $protected && !isset($dark['profile']['email'])) {
