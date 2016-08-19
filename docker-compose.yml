@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    image: tehraven/dark
+    ports:
+      - "80:80"
+    logging:
+      driver: json-file
+      options:
+        max-size: 50m
