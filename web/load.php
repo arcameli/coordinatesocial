@@ -4,9 +4,9 @@
 $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
 $host = $_SERVER["HTTP_HOST"];
 if(!isset($_SESSION["dark"]))
-    $_SESSION["dark"] = "fuckwad";
+    $_SESSION["dark"] = [];
 if(!isset($_SESSION["dark"]["profile"]))
-    $_SESSION["dark"]["profile"] = "fuckwad";
+    $_SESSION["dark"]["profile"] = [];
 $dark = $_SESSION["dark"];
 
 $updateNeeded = false;
@@ -15,7 +15,7 @@ if(isset($_GET['action'])) {
         case "dark.profile":
             $data = json_decode(file_get_contents('php://input'), true);
             if($data && isset($data['email'])) {
-                if($dark['profile'] == "fuckwad" || $dark['profile']['email'] != $data['email'])
+                if($dark['profile'] == [] || $dark['profile']['email'] != $data['email'])
                     $updateNeeded = true;
                 $dark['profile'] = $data;
             }

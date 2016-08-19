@@ -1,5 +1,4 @@
-<?php require_once("load.php"); 
-?>
+<?php require_once("load.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +24,7 @@
             <li data-page='notifications' class="dark-hide-small dark-dropdown-hover">
                 <a href="#" class="dark-padding-large dark-hover-white" title="Notifications"><i class="fa fa-bell"></i><span class="dark-badge dark-right dark-small dark-green">3</span></a>
                 <div class="dark-dropdown-content dark-white dark-card-4">
-                    <a href="#">One new friend request test</a>
+                    <a href="#">One new friend request</a>
                     <a href="#">John Doe posted on your wall</a>
                     <a href="#">Jane likes your post</a>
                 </div>

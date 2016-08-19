@@ -2,8 +2,8 @@ if(document.location.hash.indexOf("access_token") >= 0) {
     dark.log("auth", "access_token");
     /* Register Authentication Attempt */
     dark['auth0'] = new Auth0({
-        domain:                 'arcameli.auth0.com',
-        clientID:               'R9BWEKmvbdPR5Uf9KNyFdibFCNXxpLrQ',
+        domain:                 'tehraven.auth0.com',
+        clientID:               'RL3MzQRVaEie6qsIhYf3Y9Da8a9fUR8l',
         callbackURL:            '/',
         callbackOnLocationHash: true
     });
@@ -29,8 +29,8 @@ else if(localStorage.getItem("idToken") != null) {
     dark.log("auth", "localStorage");
     /* Register Authentication Attempt */
     dark['auth0'] = new Auth0({
-        domain:                 'arcameli.auth0.com',
-        clientID:               'R9BWEKmvbdPR5Uf9KNyFdibFCNXxpLrQ',
+        domain:                 'tehraven.auth0.com',
+        clientID:               'RL3MzQRVaEie6qsIhYf3Y9Da8a9fUR8l',
         callbackURL:            '/',
         callbackOnLocationHash: true
     });
