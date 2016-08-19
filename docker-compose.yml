@@ -1,0 +1,15 @@
+version: '2'
+services:
+ web:
+   image: webapp:v3
+   ports:
+     - "80:80"
+   volumes:
+     - /c/Users/o/mydockerbuild/web:/var/www/web
+   environment:
+     - RDS_DB_NAME=ebdb
+     - RDS_USERNAME=arcameli
+     - RDS_PASSWORD=Kameleon13
+     - RDS_HOSTNAME=aa3f3k3e04tw8h.cmygdl0of15n.us-west-2.rds.amazonaws.com
+     
+     
