@@ -3,7 +3,7 @@
 
 $_SESSION["dark"] = "dark";
 
-$protocol = stripos($_SERVER["SERVER_PROTOCOL"],"http") === true ? "http://" : "http://";
+$protocol = stripos($_SERVER["SERVER_PROTOCOL"],"https") === true ? "https://" : "http://";
 
 $host = $_SERVER["HTTP_HOST"];
 
