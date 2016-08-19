@@ -4,7 +4,7 @@ if(document.location.hash.indexOf("access_token") >= 0) {
     dark['auth0'] = new Auth0({
         domain:                 'arcameli.auth0.com',
         clientID:               'R9BWEKmvbdPR5Uf9KNyFdibFCNXxpLrQ',
-        callbackURL:            '/',
+        callbackURL:            '/index.php',
         callbackOnLocationHash: true
     });
     var result = dark.auth0.parseHash(window.location.hash);
@@ -31,7 +31,7 @@ else if(localStorage.getItem("idToken") != null) {
     dark['auth0'] = new Auth0({
         domain:                 'arcameli.auth0.com',
         clientID:               'R9BWEKmvbdPR5Uf9KNyFdibFCNXxpLrQ',
-        callbackURL:            '/',
+        callbackURL:            '/index.php',
         callbackOnLocationHash: true
     });
     if(!dark.serverSynced) {
