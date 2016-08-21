@@ -14,7 +14,7 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/load.php");
          <h4 class="dark-center"><?PHP echo $dark['profile']['name']; ?></h4>
          <p class="dark-center"><img src="<?PHP echo $dark['profile']['picture']; ?>" class="dark-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw dark-margin-right dark-text-theme"></i> Designer, UI</p>
+         <p><i class="fa fa-pencil fa-fw dark-margin-right dark-text-theme"></i> <?php print_r($dark['profile']); ?></p>
          <p><i class="fa fa-home fa-fw dark-margin-right dark-text-theme"></i> London, UK</p>
          <p><i class="fa fa-birthday-cake fa-fw dark-margin-right dark-text-theme"></i> April 1, 1988</p>
         </div>
