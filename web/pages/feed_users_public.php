@@ -6,7 +6,16 @@
         <h4>Jane Doe</h4><br>
         <hr class="dark-clear">
         <p>
-        <?php require_once('./stripeconfig.php'); ?>
+        <?php
+require_once('vendor/autoload.php');
+
+$stripe = array(
+  "secret_key"      => "sk_test_nmBqbJhBKrhdfbzYriVyiCdy",
+  "publishable_key" => "pk_test_kkoq32TRFRxxf5IrQgTZgKhE"
+);
+
+\\Stripe\\Stripe::setApiKey($stripe['secret_key']);
+?>
 
 <form action="charge.php" method="post">
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
