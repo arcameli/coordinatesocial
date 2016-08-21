@@ -5,7 +5,7 @@ MAINTAINER Alex Cameli "https://github.com/arcameli"
 ADD root /
 COPY web /var/www
 
-RUN composer /
+ENTRYPOINT ["/usr/local/bin/composer"]
 
 # Maybe?
 # VOLUME ["/var/cache/nginx"]
