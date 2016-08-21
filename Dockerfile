@@ -1,5 +1,5 @@
 FROM tehraven/dark-os:latest
-MAINTAINER Anthony Powers "https://github.com/tehraven"
+MAINTAINER Alex Cameli "https://github.com/arcameli"
 # BUILDS arcameli/coordinatesocial
 
 ADD root /
