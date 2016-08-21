@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: tehraven/dark
+    image: coordinatesocial
     ports:
       - "80:80"
     logging:

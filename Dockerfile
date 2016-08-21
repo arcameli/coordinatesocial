@@ -1,6 +1,6 @@
 FROM tehraven/dark-os:latest
 MAINTAINER Anthony Powers "https://github.com/tehraven"
-# BUILDS tehraven/dark
+# BUILDS arcameli/coordinatesocial
 
 ADD root /
 COPY web /var/www

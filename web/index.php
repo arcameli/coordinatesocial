@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>dark [<?PHP echo $page; ?>]</title>
+    <title>test [<?PHP echo $page; ?>]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/dark.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
