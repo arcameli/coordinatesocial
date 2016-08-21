@@ -5,6 +5,7 @@ MAINTAINER Alex Cameli "https://github.com/arcameli"
 ADD root /
 COPY web /var/www
 
+WORKDIR RUN /usr/local/bin/composer
 RUN composer install
 
 # Maybe?
