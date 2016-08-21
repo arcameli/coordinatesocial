@@ -5,7 +5,7 @@ MAINTAINER Alex Cameli "https://github.com/arcameli"
 ADD root /
 COPY web /var/www
 
-RUN composer.phar /usr/local/bin/composer
+RUN composer /usr/local/bin/composer
 
 # Maybe?
 # VOLUME ["/var/cache/nginx"]
