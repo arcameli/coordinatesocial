@@ -5,8 +5,7 @@ MAINTAINER Alex Cameli "https://github.com/arcameli"
 ADD root /
 COPY web /var/www
 
-WORKDIR /usr/local/bin/composer
-RUN composer install --prefer-source --no-interaction
+RUN composer.phar /usr/local/bin/composer
 
 # Maybe?
 # VOLUME ["/var/cache/nginx"]
