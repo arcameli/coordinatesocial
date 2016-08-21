@@ -6,16 +6,14 @@
         <h4>Jane Doe</h4><br>
         <hr class="dark-clear">
         <p>
-        <form action="/create_subscription.php" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_kkoq32TRFRxxf5IrQgTZgKhE"
-    data-image="images/marketplace.png"
-    data-name="Emma's Farm CSA"
-    data-description="Subscription for 1 weekly box"
-    data-amount="2000"
-    data-label="Sign Me Up!">
-  </script>
+        <?php require_once('./stripeconfig.php'); ?>
+
+<form action="charge.php" method="post">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<?php echo $stripe['publishable_key']; ?>"
+          data-description="Access for a year"
+          data-amount="5000"
+          data-locale="auto"></script>
 </form>
         </p>
         <p><?php print_r($dark['profile']); ?></p>     <button type="button" class="dark-btn dark-theme-d1 dark-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
