@@ -36,7 +36,7 @@ dark.logout = function(callback) {
 dark.login = function(callback) {
     dark.log("auth", "login");
     /* Force Login */
-    dark.lock = dark.lock || new Auth0Lock('R9BWEKmvbdPR5Uf9KNyFdibFCNXxpLrQ', 'arcameli.auth0.com', {
+    dark.lock = dark.lock || new Auth0Lock('RL3MzQRVaEie6qsIhYf3Y9Da8a9fUR8l', 'tehraven.auth0.com', {
         auth: {
             params: {
                 scope: 'openid profile read:user_idp_tokens'
