@@ -5,8 +5,7 @@ MAINTAINER Alex Cameli "https://github.com/arcameli"
 ADD root /
 COPY web /var/www
 
-WORKDIR /usr/local/bin/composer
-RUN composer install
+RUN --rm -v $(pwd):/usr/local/bin/composer composer/composer install
 
 # Maybe?
 # VOLUME ["/var/cache/nginx"]
