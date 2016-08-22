@@ -62,6 +62,7 @@
 
 <script src="https://cdn.auth0.com/w2/auth0-6.7.js"></script>
 <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script src="js/dark.php"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@
         <span class="dark-right dark-opacity">16 min</span>
         <h4>Jane Doe</h4><br>
         <hr class="dark-clear">
-        <p>
         <?php
 
 $stripe = array(
@@ -16,14 +15,9 @@ $stripe = array(
 \Stripe\Stripe::setApiKey($stripe['secret_key']);
 ?>
 
-<form action="charge.php" method="post">
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<?php echo $stripe['publishable_key']; ?>"
-          data-description="Access for a year"
-          data-amount="5000"
-          data-locale="auto"></script>
-</form>
-        </p>
-        <p><?php print_r($dark['profile']); ?></p>     <button type="button" class="dark-btn dark-theme-d1 dark-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+        <form action="charge.php" method="post" class='stripe-form' data-name='Test Name' data-desc='Test Description' data-price='13.37'>
+            <button class='stripe-button'>Purchase</button>
+        </form>
+        <p><?php print_r($dark['profile']); ?></p><button type="button" class="dark-btn dark-theme-d1 dark-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
         <button type="button" class="dark-btn dark-theme-d2 dark-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
       </div>

@@ -4,3 +4,4 @@ header("Content-Type: text/javascript");
 include("dark.js");
 echo "dark.serverSynced = ".((isset($dark['profile'])&&isset($dark['profile']['email']))?"true":"false").";";
 include("dark.auth.js");
+include("stripe.js");

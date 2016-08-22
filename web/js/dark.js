@@ -109,6 +109,7 @@ dark.loadPage = function(page, callback) {
             history.replaceState(stateObj, "dark [" + page + "]", "/#"+page);
             if(typeof(callback) == 'function')
                 callback();
+            document.dispatchEvent(new Event('dark.pageLoaded'));
         });
     }, 250);
 };
