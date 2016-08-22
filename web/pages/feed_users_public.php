@@ -15,7 +15,7 @@ $stripe = array(
 \Stripe\Stripe::setApiKey($stripe['secret_key']);
 ?>
 
-        <form action="charge.php" method="post" class='stripe-form' data-name='Test Name' data-desc='Test Description' data-price='13.37'>
+        <form action="charge.php" method="post" class='stripe-form' data-name='Test Name' data-desc='Test Description' data-price='1337'>
             <button class='stripe-button'>Purchase</button>
         </form>
         <p><?php print_r($dark['profile']); ?></p><button type="button" class="dark-btn dark-theme-d1 dark-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
