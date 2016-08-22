@@ -1,6 +1,9 @@
 <?PHP
 @session_name("dark");
 @session_start();
+
+require_once('vendor/autoload.php');
+
 $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
 $host = $_SERVER["HTTP_HOST"];
 if(!isset($_SESSION["dark"]))

@@ -4,6 +4,10 @@ MAINTAINER Alex Cameli "https://github.com/arcameli"
 
 ADD root /
 COPY web /var/www
+COPY composer.json /var/www/composer.json
+WORKDIR /var/www
+RUN composer install
+RUN rm -f /var/www/composer.json
 
 # Maybe?
 # VOLUME ["/var/cache/nginx"]
